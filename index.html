@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreamFlix - Votre plateforme de streaming pour films et séries. Découvrez des milliers de contenus en haute qualité.">
+  <title>StreamFlix - Plateforme de Streaming</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header>
+    <nav aria-label="Navigation principale">
+      <a href="index.html" aria-label="Retour à l'accueil StreamFlix">
+        <img src="images/logo.png" alt="StreamFlix" width="150" height="50">
+      </a>
+
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="films.html">Films</a></li>
+        <li><a href="series.html">Séries</a></li>
+        <li><a href="ma-liste.html">Ma Liste</a></li>
+      </ul>
+
+      <form action="/recherche" method="get" role="search" aria-label="Recherche de contenus">
+        <label for="search-input">Rechercher un film ou une série</label>
+        <input
+          type="search"
+          id="search-input"
+          name="q"
+          placeholder="Rechercher..."
+          required
+          minlength="2">
+        <button type="submit">Rechercher</button>
+      </form>
+
+      <details class="profile-menu">
+        <summary aria-haspopup="menu">
+          Profil
+        </summary>
+        <nav aria-label="Menu du profil">
+          <ul>
+            <li><a href="compte.html">Mon compte</a></li>
+            <li><a href="parametres.html">Paramètres</a></li>
+            <li><a href="deconnexion.html">Déconnexion</a></li>
+          </ul>
+        </nav>
+      </details>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section aria-labelledby="hero-title" aria-describedby="hero-desc">
+      <img src="images/hero-bg.jpg" alt="" width="1600" height="600">
+      <div>
+        <h1 id="hero-title">Inception</h1>
+        <p id="hero-desc">
+          Un voleur qui s'infiltre dans les rêves des autres pour voler leurs secrets découvre qu'il doit réaliser l'impossible : planter une idée plutôt que de la voler.
+        </p>
+
+        <dl>
+          <dt>Année</dt>
+          <dd><time datetime="2010">2010</time></dd>
+          <dt>Durée</dt>
+          <dd><time datetime="PT2H28M">2h28</time></dd>
+          <dt>Note</dt>
+          <dd>
+            <meter min="0" max="5" value="4.5" aria-label="Note 4,5 sur 5">4.5/5</meter>
+          </dd>
+          <dt>Genres</dt>
+          <dd>Sci-Fi, Thriller</dd>
+        </dl>
+
+        <div role="group" aria-label="Actions du film">
+          <button type="button">Lecture</button>
+          <button type="button">Plus d'infos</button>
+          <button type="button" aria-pressed="false">Ma Liste</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="tendances-heading">
+      <h2 id="tendances-heading">Tendances actuelles</h2>
+      <ul class="cards">
+        <li>
+          <article aria-labelledby="dk-title">
+            <a href="film-dark-knight.html">
+              <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" width="300" height="450">
+              <h3 id="dk-title">The Dark Knight</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="2008">2008</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.8" aria-label="4,8 sur 5">4.8/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H32M">2h32</time></dd>
+              <dt>Genres</dt><dd>Action, Crime, Drama</dd>
+            </dl>
+          </article>
+        </li>
+
+        <li>
+          <article aria-labelledby="interstellar-title">
+            <a href="film-interstellar.html">
+              <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" width="300" height="450">
+              <h3 id="interstellar-title">Interstellar</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="2014">2014</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.7" aria-label="4,7 sur 5">4.7/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H49M">2h49</time></dd>
+              <dt>Genres</dt><dd>Sci-Fi, Drama</dd>
+            </dl>
+          </article>
+        </li>
+
+        <li>
+          <article aria-labelledby="pf-title">
+            <a href="film-pulp-fiction.html">
+              <img src="images/films/pulp-fiction.jpg" alt="Affiche du film Pulp Fiction" width="300" height="450">
+              <h3 id="pf-title">Pulp Fiction</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="1994">1994</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.6" aria-label="4,6 sur 5">4.6/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H34M">2h34</time></dd>
+              <dt>Genres</dt><dd>Crime, Drama</dd>
+            </dl>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="recommandes-heading">
+      <h2 id="recommandes-heading">Recommandés pour vous</h2>
+      <ul class="cards">
+        <li>
+          <article aria-labelledby="inception-card-title">
+            <a href="film-inception.html">
+              <img src="images/films/inception.jpg" alt="Affiche du film Inception" width="300" height="450">
+              <h3 id="inception-card-title">Inception</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="2010">2010</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.5" aria-label="4,5 sur 5">4.5/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H28M">2h28</time></dd>
+              <dt>Genres</dt><dd>Sci-Fi, Thriller</dd>
+            </dl>
+          </article>
+        </li>
+
+        <li>
+          <article aria-labelledby="matrix-title">
+            <a href="film-matrix.html">
+              <img src="images/films/matrix.jpg" alt="Affiche du film The Matrix" width="300" height="450">
+              <h3 id="matrix-title">The Matrix</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="1999">1999</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.5" aria-label="4,5 sur 5">4.5/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H16M">2h16</time></dd>
+              <dt>Genres</dt><dd>Action, Sci-Fi</dd>
+            </dl>
+          </article>
+        </li>
+
+        <li>
+          <article aria-labelledby="fg-title">
+            <a href="film-forrest-gump.html">
+              <img src="images/films/forrest-gump.jpg" alt="Affiche du film Forrest Gump" width="300" height="450">
+              <h3 id="fg-title">Forrest Gump</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="1994">1994</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.4" aria-label="4,4 sur 5">4.4/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H22M">2h22</time></dd>
+              <dt>Genres</dt><dd>Drama, Romance</dd>
+            </dl>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="nouveautes-heading">
+      <h2 id="nouveautes-heading">Nouveautés</h2>
+      <ul class="cards">
+        <li>
+          <article aria-labelledby="interstellar-new-title">
+            <a href="film-interstellar.html">
+              <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" width="300" height="450">
+              <h3 id="interstellar-new-title">Interstellar</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="2014">2014</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.7" aria-label="4,7 sur 5">4.7/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H49M">2h49</time></dd>
+              <dt>Genres</dt><dd>Sci-Fi, Drama</dd>
+            </dl>
+          </article>
+        </li>
+
+        <li>
+          <article aria-labelledby="dk-new-title">
+            <a href="film-dark-knight.html">
+              <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" width="300" height="450">
+              <h3 id="dk-new-title">The Dark Knight</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="2008">2008</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.8" aria-label="4,8 sur 5">4.8/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H32M">2h32</time></dd>
+              <dt>Genres</dt><dd>Action, Crime, Drama</dd>
+            </dl>
+          </article>
+        </li>
+
+        <li>
+          <article aria-labelledby="inception-new-title">
+            <a href="film-inception.html">
+              <img src="images/films/inception.jpg" alt="Affiche du film Inception" width="300" height="450">
+              <h3 id="inception-new-title">Inception</h3>
+            </a>
+            <dl>
+              <dt>Année</dt><dd><time datetime="2010">2010</time></dd>
+              <dt>Note</dt><dd><meter min="0" max="5" value="4.5" aria-label="4,5 sur 5">4.5/5</meter></dd>
+              <dt>Durée</dt><dd><time datetime="PT2H28M">2h28</time></dd>
+              <dt>Genres</dt><dd>Sci-Fi, Thriller</dd>
+            </dl>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <nav aria-label="Navigation secondaire">
+      <h2>Liens utiles</h2>
+      <ul>
+        <li><a href="aide.html">Aide</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="conditions-utilisation.html">Conditions d'utilisation</a></li>
+        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="social-title">
+      <h2 id="social-title">Suivez-nous</h2>
+      <ul>
+        <li><a href="https://facebook.com/streamflix" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://twitter.com/streamflix" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        <li><a href="https://instagram.com/streamflix" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://youtube.com/streamflix" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      </ul>
+    </section>
+
+    <p><small>&copy; <time datetime="2025">2025</time> StreamFlix. Tous droits réservés.</small></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
