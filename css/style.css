@@ -422,6 +422,8 @@ main > section h2 {
   gap: var(--s-5);
   justify-items: center;
   justify-content: center;
+  align-items: start;
+
 }
 
 .cards article {
@@ -594,6 +596,7 @@ footer {
   background: var(--glass);
   border-top: 1px solid var(--border);
   backdrop-filter: blur(10px);
+  text-align: center;
 }
 
 footer > * {
@@ -612,6 +615,8 @@ footer ul {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3) var(--s-4);
+  justify-content: center;
+  align-items: center;
 }
 
 footer a {
