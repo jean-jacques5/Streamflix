@@ -1,0 +1,29 @@
+@use "../utils/variables" as v;
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: v.$glass;
+  text-align: center;
+  border-top: 1px solid v.$border;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+
+    a {
+      color: v.$text-muted;
+
+      &:hover {
+        color: v.$accent-blue;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: v.$text-muted;
+  }
+}

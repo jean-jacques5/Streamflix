@@ -1,0 +1,19 @@
+@use "../utils/variables" as v;
+
+body {
+  font-family: v.$font-primary;
+  font-size: v.$font-size-base;
+  line-height: 1.5;
+  background: v.$bg;
+  color: v.$text-light;
+}
+
+a {
+  color: v.$text-light;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: v.$accent-blue;
+}

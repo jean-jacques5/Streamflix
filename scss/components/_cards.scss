@@ -1,0 +1,40 @@
+@use "../utils/variables" as v;
+
+.cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+
+  article {
+    background: v.$glass;
+    border: 1px solid v.$border;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 320px;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: v.$accent-blue;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/3;
+      object-fit: cover;
+    }
+
+    h3 {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
+    dl {
+      padding: 0 1rem 1rem;
+      font-size: 0.9rem;
+      color: v.$text-muted;
+    }
+  }
+}

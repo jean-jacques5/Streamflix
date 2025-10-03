@@ -1,0 +1,33 @@
+@use "../utils/variables" as v;
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: v.$glass;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid v.$border;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+
+      a {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+
+        &:hover {
+          background: v.$glass-hover;
+          color: v.$accent-blue;
+        }
+      }
+    }
+  }
+}

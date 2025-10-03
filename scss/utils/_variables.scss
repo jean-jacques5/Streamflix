@@ -1,0 +1,25 @@
+@use "sass:color";
+
+// 🎨 Palette StreamFlix
+$primary-red: #e50914;
+$primary-dark: #221f1f;
+$secondary-gray: #564d4d;
+$text-light: #ffffff;
+$text-muted: #999999;
+$accent-blue: #0071eb;
+$accent-hover: color.adjust($accent-blue, $lightness: -10%);
+
+// Typographie
+$font-primary: 'Netflix Sans', 'Helvetica Neue', sans-serif;
+$font-secondary: 'Arial', sans-serif;
+$font-size-base: 16px;
+$font-size-large: 24px;
+$font-size-small: 14px;
+
+// Variables extra (venant du J2)
+$bg: #0a0e17;
+$bg-2: #141824;
+$glass: rgba(255, 255, 255, 0.06);
+$glass-hover: rgba(255, 255, 255, 0.10);
+$border: rgba(255, 255, 255, 0.12);
+$border-focus: rgba(59, 130, 246, 0.5);
