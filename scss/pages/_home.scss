@@ -1,11 +1,11 @@
-@use "../utils/variables" as v;
+@use "utils/variables" as v;
 
-.home-section {
-  padding: 2rem;
-  text-align: center;
+main > section:not(:first-of-type):not(#inscription){
+  /* déjà géré côté cards, ici on met juste le basique si besoin */
 }
 
-.home-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+@media print{
+  header, footer, #inscription, form, button { display: none; }
+  body{ background: #fff; color: #000; }
+  .cards{ grid-template-columns: repeat(2, 1fr); }
 }

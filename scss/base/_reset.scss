@@ -1,3 +1,6 @@
+@use "utils/variables" as v;
+@use "utils/mixins" as m;
+
 *,
 *::before,
 *::after {
@@ -6,14 +9,46 @@
   padding: 0;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+html {
+  font-size: v.$fs;
+  scroll-behavior: smooth;
 }
 
-button {
-  border: none;
-  background: none;
-  font: inherit;
-  cursor: pointer;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: v.$text;
+  text-decoration: none;
+  transition: color v.$t-fast;
+}
+
+a:hover {
+  color: v.$accent;
+}
+
+:focus-visible {
+  outline: 2px solid v.$accent;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+body {
+  font-family: v.$ff;
+  line-height: 1.5;
+  color: v.$text;
+  background: v.$bg;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, .10) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, .10) 0%, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  @include m.container;
 }

@@ -1,0 +1,9 @@
+@use "utils/variables" as v;
+
+/* Breakpoints globaux supplémentaires — ne dupliquent pas ceux déjà gérés
+   dans header/hero/cards. Garde ce fichier si tu veux des règles globales. */
+
+/* Exemple (tu peux laisser vide si tu n’en as pas besoin maintenant) */
+@media (max-width: 359px) {
+  html { font-size: 15px; }
+}

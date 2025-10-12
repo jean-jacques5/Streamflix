@@ -1,29 +1,20 @@
-@use "../utils/variables" as v;
+@use "utils/variables" as v;
 
-footer {
-  margin-top: 4rem;
-  padding: 2rem;
+footer{
+  margin-top: v.$s-7;
+  padding: v.$s-6 v.$s-4 v.$s-4;
   background: v.$glass;
-  text-align: center;
   border-top: 1px solid v.$border;
+  backdrop-filter: blur(10px);
+  text-align: center;
 
-  ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    justify-content: center;
+  > *{ max-width: v.$container; margin: 0 auto v.$s-4; }
+  h2{ font-size: 1.1rem; color: v.$muted; margin-bottom: v.$s-3; }
 
-    a {
-      color: v.$text-muted;
-
-      &:hover {
-        color: v.$accent-blue;
-      }
-    }
+  ul{
+    list-style: none; display:flex; flex-wrap: wrap; gap: v.$s-3 v.$s-4; justify-content:center; align-items:center;
   }
 
-  p {
-    font-size: 0.9rem;
-    color: v.$text-muted;
-  }
+  a{ color: v.$text-2; font-size: .95rem; &:hover{ color: v.$accent; } }
+  p{ text-align: center; color: #9aa8c2; font-size: .9rem; }
 }

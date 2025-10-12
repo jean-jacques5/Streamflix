@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="StreamFlix - Votre plateforme de streaming pour films et séries. Découvrez des milliers de contenus en haute qualité.">
   <title>StreamFlix - Plateforme de Streaming</title>
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
@@ -44,6 +44,7 @@
   </header>
 
   <main id="main-content" tabindex="-1">
+    <!-- HERO -->
     <section aria-labelledby="hero-title" aria-describedby="hero-desc">
       <img src="images/hero-bg.jpg" alt="">
       <div>
@@ -67,10 +68,11 @@
       </div>
     </section>
 
+    <!-- TENDANCES -->
     <section aria-labelledby="tendances-heading">
       <h2 id="tendances-heading">Tendances actuelles</h2>
-      <ul class="cards">
-        <li>
+      <ul class="cards" role="list" aria-label="Films tendances">
+        <li role="listitem">
           <article aria-labelledby="dk-title">
             <a href="#">
               <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight">
@@ -84,7 +86,7 @@
             </dl>
           </article>
         </li>
-        <li>
+        <li role="listitem">
           <article aria-labelledby="interstellar-title">
             <a href="#">
               <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar">
@@ -98,7 +100,7 @@
             </dl>
           </article>
         </li>
-        <li>
+        <li role="listitem">
           <article aria-labelledby="pf-title">
             <a href="#">
               <img src="images/films/pulp-fiction.jpg" alt="Affiche du film Pulp Fiction">
@@ -115,10 +117,11 @@
       </ul>
     </section>
 
+    <!-- RECOMMANDÉS -->
     <section aria-labelledby="recommandes-heading">
       <h2 id="recommandes-heading">Recommandés pour vous</h2>
-      <ul class="cards">
-        <li>
+      <ul class="cards" role="list" aria-label="Films recommandés">
+        <li role="listitem">
           <article aria-labelledby="inception-card-title">
             <a href="#">
               <img src="images/films/inception.jpg" alt="Affiche du film Inception">
@@ -132,7 +135,7 @@
             </dl>
           </article>
         </li>
-        <li>
+        <li role="listitem">
           <article aria-labelledby="matrix-title">
             <a href="#">
               <img src="images/films/matrix.jpg" alt="Affiche du film The Matrix">
@@ -146,7 +149,7 @@
             </dl>
           </article>
         </li>
-        <li>
+        <li role="listitem">
           <article aria-labelledby="fg-title">
             <a href="#">
               <img src="images/films/forrest-gump.jpg" alt="Affiche du film Forrest Gump">
@@ -163,10 +166,11 @@
       </ul>
     </section>
 
+    <!-- NOUVEAUTÉS -->
     <section aria-labelledby="nouveautes-heading">
       <h2 id="nouveautes-heading">Nouveautés</h2>
-      <ul class="cards">
-        <li>
+      <ul class="cards" role="list" aria-label="Nouveaux films">
+        <li role="listitem">
           <article aria-labelledby="interstellar-new-title">
             <a href="#">
               <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar">
@@ -180,7 +184,7 @@
             </dl>
           </article>
         </li>
-        <li>
+        <li role="listitem">
           <article aria-labelledby="dk-new-title">
             <a href="#">
               <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight">
@@ -194,7 +198,7 @@
             </dl>
           </article>
         </li>
-        <li>
+        <li role="listitem">
           <article aria-labelledby="inception-new-title">
             <a href="#">
               <img src="images/films/inception.jpg" alt="Affiche du film Inception">
@@ -211,11 +215,13 @@
       </ul>
     </section>
 
+    <!-- MA LISTE (placeholder simple J4) -->
     <section id="ma-liste" class="grid-section" aria-labelledby="list-title">
       <h2 id="list-title">Ma liste</h2>
       <p>Connectez-vous pour retrouver vos favoris ici.</p>
     </section>
 
+    <!-- INSCRIPTION -->
     <section id="inscription" aria-labelledby="inscription-title">
       <h2 id="inscription-title">Créer un compte</h2>
       <form action="#" method="post" novalidate>
@@ -256,5 +262,7 @@
     </nav>
     <p><small>&copy; <time datetime="2025">2025</time> StreamFlix. Tous droits réservés.</small></p>
   </footer>
+
+  <script src="js/script.js" defer></script>
 </body>
 </html>

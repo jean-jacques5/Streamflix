@@ -1,33 +1,95 @@
-@use "../utils/variables" as v;
+@use "utils/variables" as v;
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+header{
+  position: sticky; top: 0; z-index: 1000;
   background: v.$glass;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid v.$border;
+  box-shadow: v.$sh-md;
+  overflow: visible;
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+  nav{
+    display: flex; flex-direction: column; gap: v.$s-3;
+    padding: v.$s-3; max-width: v.$container; margin: 0 auto;
 
-    ul {
-      display: flex;
-      gap: 1rem;
-      list-style: none;
+    > a{ display: flex; align-items: center; }
+    img{ height: 40px; width: auto; }
 
-      a {
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
+    > ul{
+      display: flex; flex-wrap: wrap; gap: v.$s-3; list-style: none;
 
-        &:hover {
-          background: v.$glass-hover;
-          color: v.$accent-blue;
+      a{
+        display: block; padding: v.$s-2 v.$s-3;
+        border-radius: v.$r-md; font-weight: 500;
+
+        &:hover,
+        &[aria-current="page"]{
+          background: v.$glass-hover; color: v.$accent;
+        }
+      }
+    }
+
+    form[role="search"]{
+      display: flex; gap: v.$s-2; flex: 1; max-width: 400px;
+
+      label{ position: absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip: rect(0 0 0 0); }
+
+      input{
+        flex:1; min-width:220px; padding:v.$s-2 v.$s-3;
+        background: v.$glass; border:1px solid v.$border; border-radius: v.$r-full;
+        color: v.$text; font-size:.95rem; transition: border-color v.$t-fast, background v.$t-fast;
+
+        &::placeholder{ color: v.$muted; }
+        &:focus{ border-color: v.$border-focus; background: v.$glass-hover; }
+      }
+
+      button{
+        padding: v.$s-2 v.$s-4; border:0; border-radius: v.$r-full;
+        background: v.$accent; color:#fff; font-weight:600; cursor:pointer;
+        transition: background v.$t-fast, transform v.$t-fast;
+
+        &:hover{ background: v.$accent-hover; transform: translateY(-1px); }
+      }
+    }
+
+    .profile-menu{
+      position: relative; isolation: isolate;
+
+      summary{
+        display:inline-flex; align-items:center; gap:.5rem;
+        padding: v.$s-2 v.$s-3; background: v.$glass; border:1px solid v.$border;
+        border-radius: v.$r-md; cursor: pointer; list-style: none;
+
+        &::-webkit-details-marker{ display: none; }
+        &:hover{ background: v.$glass-hover; border-color: v.$accent; }
+      }
+
+      &[open] summary{ background: v.$glass-hover; border-color: v.$accent; }
+
+      nav{
+        position: absolute; inset-inline-end: 0; top: calc(100% + .5rem);
+        z-index: 2000; width: max-content; min-width: 220px; max-width: min(320px, 90vw);
+        background: v.$bg-2; border:1px solid v.$border; border-radius: v.$r-lg;
+        box-shadow: v.$sh-lg; overflow: hidden;
+
+        ul{ list-style: none; }
+        a{ display:flex; align-items:center; gap:.5rem; padding:.75rem 1rem; white-space: nowrap; color: v.$text-2;
+          &:hover{ background: v.$glass-hover; color: v.$accent; }
         }
       }
     }
   }
+}
+
+/* Tablet + */
+@media (min-width: 768px){
+  header nav{
+    flex-direction: row; align-items: center; justify-content: space-between;
+    form[role="search"]{ order: 3; max-width: 300px; }
+  }
+}
+
+/* Desktop + */
+@media (min-width: 992px){
+  header nav form[role="search"]{ max-width: 360px; }
 }

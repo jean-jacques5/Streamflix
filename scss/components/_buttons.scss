@@ -1,14 +1,2 @@
-@use "../utils/variables" as v;
-
-.btn-primary {
-  background: v.$accent-blue;
-  color: v.$text-light;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  transition: background 0.3s, transform 0.3s;
-
-  &:hover {
-    background: v.$accent-hover;
-    transform: translateY(-2px);
-  }
-}
+/* Les boutons principaux sont déjà stylés dans hero/header via leurs sélecteurs.
+   Ici on garde la place pour de futurs boutons génériques si besoin. */
