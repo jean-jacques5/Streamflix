@@ -674,10 +674,6 @@ main > section:not(:first-of-type):not(#inscription) h2 {
   transform: translateY(-1px);
 }
 
-main > section:not(:first-of-type):not(#inscription) {
-  /* déjà géré côté cards, ici on met juste le basique si besoin */
-}
-
 @media print {
   header, footer, #inscription, form, button {
     display: none;
