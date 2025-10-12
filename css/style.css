@@ -545,9 +545,7 @@ main > section:not(:first-of-type):not(#inscription) h2 {
   border-color: rgba(59, 130, 246, 0.5);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
 }
-#inscription form {
-  /* ligne checkbox */
-}
+
 #inscription form > div:has(input[type=checkbox]) {
   flex-direction: row;
   align-items: center;
