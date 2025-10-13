@@ -1,8 +1,0 @@
-@use "../utils/variables" as v;
-
-:root {
-  --bs-body-bg: #{v.$primary-dark};
-  --bs-body-color: #{v.$text-light};
-  --bs-primary: #{v.$primary-red};
-  --bs-secondary: #{v.$secondary-gray};
-}
